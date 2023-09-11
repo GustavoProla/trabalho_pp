@@ -1,7 +1,7 @@
 # INFORMAÇÕES DO BANCO DE DADOS
 
 ```
-create database crud;
+create database crud2;
 ```
 
 ```
