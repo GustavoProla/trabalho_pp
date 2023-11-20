@@ -1,21 +1,21 @@
 # INFORMAÇÕES DO BANCO DE DADOS
 
 ```
-create database crud2;
+create database teste_crud;
 ```
 
 ```
-use crud2;
+use teste_crud;
 ```
 ```
-CREATE TABLE usuarios(
-  id INT NOT NULL AUTO_INCREMENT,
-  nome VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  fone VARCHAR(45) NOT NULL,
-  data_nascimento DATE NOT NULL,
+CREATE TABLE `usuarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(120) NOT NULL,
+  `nome` varchar(120) NOT NULL,
+  `turma` varchar(120) NOT NULL,
+  `info` varchar(300) NOT NULL,
   PRIMARY KEY (`id`)
-);
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 ```
 # COMO RODAR A APLICAÇÃO
 
