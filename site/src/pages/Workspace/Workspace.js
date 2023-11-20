@@ -2,16 +2,16 @@ import React from "react";
 
 
 import { useEffect, useState,useRef } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import axios from "axios";
 import Grid from "./Grid";
 import Form from "./Form";
 import GlobalStyle from "../../styles/global";
 import Header from "../../styles/Header";
-
+import Damn from "../../styles/Damn";
 
 const Workspace = () => {
-  
+ 
   
   const [users, setUsers] = useState([]);
   const ref = useRef();
@@ -56,6 +56,7 @@ const Workspace = () => {
     
     <>
     <Header/>
+    
     <h1>Workspace</h1>
     
 
@@ -74,7 +75,7 @@ const Workspace = () => {
         <Form />
         <Grid  users={users} setUsers={setUsers} />
       </div>
-      <ToastContainer autoClose={3000} position={toast.POSITION.BOTTOM_LEFT} />
+      
       <GlobalStyle/>
     </>
     
