@@ -1,11 +1,11 @@
 # INFORMAÇÕES DO BANCO DE DADOS
 
 ```
-create database crud2;
+create database teste_crud;
 ```
 
 ```
-use crud2;
+use teste_crud;
 ```
 ```
 CREATE TABLE `usuarios` (
