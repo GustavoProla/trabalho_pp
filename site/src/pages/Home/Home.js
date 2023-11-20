@@ -1,14 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
-
+import GlobalStyle from "../../styles/global";
+import Header from "../../styles/Header";
 function Home(){
-    const { signout } = useAuth();
-    const navigate = useNavigate();
+    
     return(
         <>
+        <Header/>
         <h1>HOME</h1>
-        <Link to="/workspace">&nbsp;Workspace</Link>
-        <button onClick={() => [signout(), navigate("/")]}>Sair</button>
+        
+        <GlobalStyle/>
         </>
     )
 }

@@ -49,10 +49,7 @@ const Signup = () => {
 
         <button type="button" onClick={handleSignup}>Inscrever-se</button>
         
-        <label>
-        Já tem uma conta?
-        <Link to="/">&nbsp;Entre</Link>
-        </label>
+        <label>Já tem uma conta?<Link to="/">&nbsp;Entre</Link></label>
     </form>
     </>
   );

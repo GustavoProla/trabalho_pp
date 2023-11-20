@@ -1,16 +1,9 @@
-import React from "react";
-import axios from "axios";
-import { FaTrash } from "react-icons/fa";
-import { toast } from "react-toastify";
-
-import {  useState,useRef } from "react";
-
 const Grid = ({ users, setUsers }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [currentItemId, setCurrentItemId] = useState(null); // Novo estado para armazenar o item.id
   const ref = useRef();
-  
+
   const openModal = async (id) => {
     setModalIsOpen(true);
     setSelectedUserId(id);
@@ -118,15 +111,16 @@ const Grid = ({ users, setUsers }) => {
               <tr key={i}>
                 <td>{item.id}</td>
                 <td>{item.info}</td>
-                
+                <td>
+                  
+                </td>
               </tr>
             ))}
         </tbody>
       </table>
       <form ref={ref}>
-              <textarea name="info"  placeholder="Digite aqui..."  maxLength={100} style={{ height: "100px",resize: "none", width: "500px",padding: "8px",  }}></textarea>
-                    
-                    <button type="button" onClick={() => handleUpdate()}>
+                    <input name="info" />
+                    <button type="button" onClick={() => handleUpdate(52)}>
                       Atualizar
                     </button>
                   </form>
@@ -137,5 +131,3 @@ const Grid = ({ users, setUsers }) => {
     </>
   );
 };
-
-export default Grid;

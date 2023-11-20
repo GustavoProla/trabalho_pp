@@ -10,24 +10,33 @@ export const AuthProvider = ({ children }) => {
     const usersStorage = localStorage.getItem("users_bd");
 
     if (userToken && usersStorage) {
-      const hasUser = JSON.parse(usersStorage)?.filter(
-        (user) => user.email === JSON.parse(userToken).email
-      );
+      const hasUser = JSON.parse(usersStorage)?.filter((user) => user.email === JSON.parse(userToken).email);
 
       if (hasUser) setUser(hasUser[0]);
     }
   }, []);
 
+
+
+
+
+
+
+
+  
   const signin = (email, password) => {
     const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
 
     const hasUser = usersStorage?.filter((user) => user.email === email);
-
+    
+    
+    
     if (hasUser?.length) {
       if (hasUser[0].email === email && hasUser[0].password === password) {
         const token = Math.random().toString(36).substring(2);
         localStorage.setItem("user_token", JSON.stringify({ email, token }));
         setUser({ email, password });
+        
         return;
       } else {
         return "E-mail ou senha incorretos";
@@ -35,13 +44,22 @@ export const AuthProvider = ({ children }) => {
     } else {
       return "Usuário não cadastrado";
     }
+    
   };
+
+
+
+
+
+
+
+
 
   const signup = (email, password) => {
     const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
 
     const hasUser = usersStorage?.filter((user) => user.email === email);
-
+    
     if (hasUser?.length) {
       return "Já tem uma conta com esse E-mail";
     }
